@@ -54,9 +54,9 @@ export default function Ui() {
                 </div>
                 <h1>Persistant</h1>
                 <ul>
-                    <li className='UIListItem' onPointerEnter={() => Underlinepseudoelement(0)} onPointerLeave={() => DeUnderlinepseudoelement(0)}><span>Focus</span> <img src="./Focus.svg" alt="focus icon" />   <div className='Uipseudo-element'></div></li>
-                    <li className="UIListItem" onPointerEnter={() => Underlinepseudoelement(1)} onPointerLeave={() => DeUnderlinepseudoelement(1)}><span>To-Do</span> <img src="./Todo.svg" alt="todo icon" /> <div className="Uipseudo-element"></div></li>
-                    <li className="UIListItem" onPointerEnter={() => Underlinepseudoelement(2)} onPointerLeave={() => DeUnderlinepseudoelement(2)}><span>Expense-Tracker</span> <img src="./Expense.svg" alt="expense icon" /> <div className="Uipseudo-element"></div></li>
+                    <li className='UIListItem' onPointerEnter={() => Underlinepseudoelement(0)} onPointerLeave={() => DeUnderlinepseudoelement(0)}><span>Focus</span> <i className='fa fa-sun-o'></i>   <div className='Uipseudo-element'></div></li>
+                    <li className="UIListItem" onPointerEnter={() => Underlinepseudoelement(1)} onPointerLeave={() => DeUnderlinepseudoelement(1)}><span>To-Do</span> <img src='./Todo.png'id='icon' alt='icon'></img><div className="Uipseudo-element"></div></li>
+                    <li className="UIListItem" onPointerEnter={() => Underlinepseudoelement(2)} onPointerLeave={() => DeUnderlinepseudoelement(2)}><span>Expense-Tracker</span> <i className='fa fa-money'></i><div className="Uipseudo-element"></div></li>
                     <li className="UIListItem" onPointerEnter={() => Underlinepseudoelement(3)} onPointerLeave={() => DeUnderlinepseudoelement(3)}>{currentWeather} <div className="Uipseudo-element"></div></li>
                 </ul>
             </nav>
