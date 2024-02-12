@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import App from "./MainApp.jsx";
+import App from "./Homepage.js";
 
 export default function Ui() {
     const [currentWeather, setCurrentWeather] = useState('NL');
