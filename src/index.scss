@@ -14,6 +14,7 @@ body {
     padding: 7vh 0 0 0;
 }
 nav {
+    z-index: 100;
     top: 0;
     position: fixed;
     width: 100vw;
@@ -45,7 +46,7 @@ nav {
     text-align: center;
 }
 section {
-    padding: 0 7% 0 7%;
+    padding: 1rem 7% 1rem 7%;
 }
 .HambergerContainer {
     display: none;
@@ -83,18 +84,21 @@ section {
         width: 100%;
         height: 100%;
         overflow: hidden;
+        border-radius: 2vh;
         img {
             width: 100%;
             height: 100%;
-            border-radius: 2vh;
+            transition: inherit;
+            filter: brightness(1);
         }
         div {
             position: absolute;
             top: 0;
             width: 100%;
             z-index: 10;
-            background-color: #333333c0;
-            backdrop-filter: blur(10px);
+            background-color: #333333ee;
+            transition: inherit;
+            border-bottom: white 0.5vh solid;
             h1 {
                 font-size: 3vh;
                 line-height: 3vh;
@@ -105,7 +109,47 @@ section {
                 text-align: center;
             }
             transform: translate(0%, -100%);
-
+        }
+    }
+}
+#contactUs {
+    background-color: #2b2b2b;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    .aboutUs {
+        width: 70%;
+        border-right: 0.1rem solid white;
+        padding-right: 5%;
+    }
+    .contactUs {
+        padding-left: 5%;
+        width: 30%;
+        a {
+            color: #aca7ff;
+        }
+    }
+}
+.pictureContainerMobile {
+    display: none;
+    article {
+        margin-top: 10rem;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5vw;
+        }
+        h1 {
+            text-align: center;
+            font-size: 6vw;
+        }
+        .first-article {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            text-align: center;
+            font-size: 3.5vw;
         }
     }
 }
@@ -127,5 +171,17 @@ section {
     }
     nav ul li {
         margin: 0 2vh 0 1vh;
+    }
+    .pictureContainer {
+        display: none;
+    }
+    .pictureContainerMobile {
+        display: block;
+    }
+    .header {
+        font-size: 6vw;
+    }
+    .description {
+        font-size: 4vw;
     }
 }

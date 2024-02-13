@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import App from "./Homepage.js";
+import App from "./Homepage";
+import Contact from "./Contact";
 
 export default function Ui() {
     const [currentWeather, setCurrentWeather] = useState('NL');
@@ -16,7 +17,6 @@ export default function Ui() {
                         const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=5554fa749437431fa7a125354240802&q=${latitude},${longitude}&aqi=no`);
                         const data = await response.json();
                         setCurrentWeather(`${data.current.temp_c}°C`);
-                        console.log('Weather data:', data);
                     }, () => {
                         setCurrentWeather('NL');
                     });
@@ -61,6 +61,7 @@ export default function Ui() {
                 </ul>
             </nav>
             <App/>
+            <Contact/>
         </>
     );
 }
