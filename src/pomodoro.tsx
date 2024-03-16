@@ -26,7 +26,7 @@ export default function App(props) {
         return newTotalSeconds;
       });
       console.log(totalSeconds, currentSession, working);
-    }, 100);
+    }, 1000);
     if (repeatsDone >= repeats) {
       clearInterval(interval)
     }
