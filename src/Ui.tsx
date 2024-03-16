@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import App from "./Homepage";
-import Contact from "./Contact";
+import Focus from "./focusTab";
+import Contact from "./contact";
 
-export default function Ui() {
+export default function Ui(props) {
     const [currentWeather, setCurrentWeather] = useState('NL');
-
+    let Page = App;
+    switch (Number(props.pageIndex)) {
+        case 0:
+            Page = App;
+            break;
+        case 1:
+            Page = Focus;
+            break;
+        default:
+            break;
+    }
     useEffect(() => {
         async function getWeather() {
             try {
@@ -52,15 +63,15 @@ export default function Ui() {
                     <div className="Hamberger"></div>
                     <div className="Hamberger"></div>
                 </div>
-                <h1>Persistant</h1>
+                <h1><a href="./index.html">Persistant</a></h1>
                 <ul>
-                    <li className='UIListItem' onPointerEnter={() => Underlinepseudoelement(0)} onPointerLeave={() => DeUnderlinepseudoelement(0)}><span>Focus</span> <i className='fa fa-sun-o'></i>   <div className='Uipseudo-element'></div></li>
+                    <li className='UIListItem' onPointerEnter={() => Underlinepseudoelement(0)} onPointerLeave={() => DeUnderlinepseudoelement(0)}><a href="./focus.html"><span>Focus</span> <i className='fa fa-sun-o'></i>   <div className='Uipseudo-element'></div></a></li>
                     <li className="UIListItem" onPointerEnter={() => Underlinepseudoelement(1)} onPointerLeave={() => DeUnderlinepseudoelement(1)}><span>To-Do</span> <img src='./Todo.png'id='icon' alt='icon'></img><div className="Uipseudo-element"></div></li>
                     <li className="UIListItem" onPointerEnter={() => Underlinepseudoelement(2)} onPointerLeave={() => DeUnderlinepseudoelement(2)}><span>Expense-Tracker</span> <i className='fa fa-money'></i><div className="Uipseudo-element"></div></li>
                     <li className="UIListItem" onPointerEnter={() => Underlinepseudoelement(3)} onPointerLeave={() => DeUnderlinepseudoelement(3)}>{currentWeather} <div className="Uipseudo-element"></div></li>
                 </ul>
             </nav>
-            <App/>
+            <Page/>
             <Contact/>
         </>
     );

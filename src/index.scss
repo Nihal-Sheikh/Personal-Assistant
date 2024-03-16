@@ -23,6 +23,10 @@ nav {
     box-shadow: 2px 2px 2px 2px rgba($color: #000000, $alpha: 0.1);
     display: flex;
     justify-content: space-between;
+    a {
+        color: white;
+        text-decoration: none;
+    }
     ul {
         list-style-type: none;
         display: flex;
@@ -31,19 +35,33 @@ nav {
         margin: 0;
         li {
             margin: 0 4vh 0 0;
+            
         }
     }
     h1 {
         font-size: 3vh;
+        padding: 0;
         margin: 0 0 0 2vh;
         font-weight:  400;
     }
+}
+main {
+    min-height: 66vh;
 }
 #root {
     min-height: 100vh;
 }
 .header, .description {
+
     text-align: center;
+}
+h1,.header{
+    padding: 1vh;
+    font-size: 5vh;
+}
+p,.description {
+    padding: 0.5vh;
+    font-size: 2vh;
 }
 section {
     padding: 1rem 7% 1rem 7%;
@@ -63,6 +81,12 @@ section {
 #icon {
     width: 2.5vh;
     height: 2.5vh;
+}
+.Uipseudo-element {
+    width: 0%;
+    height: 0.5vh;
+    background-color: #0077ff;
+    border-radius: 100vh;
 }
 .pictureContainer {
     display: grid;
@@ -96,7 +120,7 @@ section {
             top: 0;
             width: 100%;
             z-index: 10;
-            background-color: #333333ee;
+            background-color: #333333e0;
             transition: inherit;
             border-bottom: white 0.5vh solid;
             h1 {
@@ -108,7 +132,7 @@ section {
                 font-size: 2.5vh;
                 text-align: center;
             }
-            transform: translate(0%, -100%);
+            transform: translate(0%, -101%);
         }
     }
 }
@@ -118,17 +142,47 @@ section {
     padding-bottom: 1rem;
     display: flex;
     .aboutUs {
+        .contactHeader {
+            font-size: 3vh;
+        }
+        text-align: center;
         width: 70%;
         border-right: 0.1rem solid white;
         padding-right: 5%;
     }
     .contactUs {
+        .contactHeader {
+            font-size: 3vh;
+        }
         padding-left: 5%;
         width: 30%;
         a {
             color: #aca7ff;
         }
     }
+}
+.first-article {
+    margin: 0;
+    padding: 0;
+}
+.repeatHeader {
+    text-align: center;
+    font-size: 4vh;
+    line-height: 3vh;
+    margin: 2.5vh 0 1vh 0;
+    padding: 0;
+}
+.repeat {
+    margin: 1rem 0 1rem 0;
+    position: relative;
+    padding: 0;
+    background-color: #2b2b2b;
+    color: white;
+    font-size: 3vh;
+    border: white 0.1rem solid;
+    border-radius: 2vh;
+    padding: 1vh 0 1vh 0;
+    width: 100%;
 }
 .pictureContainerMobile {
     display: none;
@@ -143,21 +197,55 @@ section {
             text-align: center;
             font-size: 6vw;
         }
-        .first-article {
-            margin: 0;
-            padding: 0;
-        }
         p {
             text-align: center;
             font-size: 3.5vw;
         }
     }
 }
-.Uipseudo-element {
-    width: 0%;
-    height: 0.5vh;
-    background-color: #0077ff;
-    border-radius: 100vh;
+.pomodoro {
+    .pomodoroContainer {
+        width: 100%;
+        display: flex;
+        border-radius: 2vh;
+        border: white 0.1rem solid;
+        .pomodoroHeader{
+            padding: 1% 1% 1% 1%;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            font-size: 2vh;
+        }
+        div {
+            display: flex;
+            width: 30%;
+            border-left: white 0.1rem solid;
+            padding: 1% 1% 1% 1%;
+            h1 {
+                padding: 1% 1% 1% 1%;
+                width: 40%;
+                display: flex;
+                align-items: center;
+                font-size: 2vh;
+            }
+            input {
+                background-color: #2b2b2b;
+                color: white;
+                height: 80%;
+                font-size: 3vh;
+                width: 50%;
+                border: white 0.1rem solid;
+                border-radius: 2vh;
+            }
+        }
+    }
+}
+.clock {
+    font-size: 20vh;
+    text-align: center;
+}
+.session {
+    font-size: 5vh;
 }
 @media (max-aspect-ratio: 1/1) {
     .UIListItem span {
@@ -178,10 +266,42 @@ section {
     .pictureContainerMobile {
         display: block;
     }
-    .header {
+    
+    h1,.header {
         font-size: 6vw;
     }
-    .description {
+    p,.description {
         font-size: 4vw;
+    }
+    #contactUs {
+        flex-direction: column;
+        .aboutUs {
+            width: 100%;
+            padding-right: 0;
+            border-right: 0px;
+            border-bottom: 0.1rem solid white;
+        }
+        .contactUs {
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+    .pomodoro {
+        .pomodoroContainer {
+            div {
+                flex-direction: column;
+                input {
+                    width: unset;
+                    height: 17%;
+                }
+            }
+    }
+    .clock {
+        font-size: 15vw;
+        text-align: center;
+    }
+    .session {
+        font-size: 3.5vw;
+    }
     }
 }

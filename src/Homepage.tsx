@@ -11,7 +11,7 @@ const App = () => {
     image[i].style.transition = "all 0.5s ease-in-out";
     image[i].style.transform = `scale(1)`;
     image[i].children[0].style.filter = `brightness(1)`;
-    image[i].children[1].style.transform = `translate(0%,-100%)`;
+    image[i].children[1].style.transform = `translate(0%,-101%)`;
   }
   return (
     <main>
@@ -23,7 +23,7 @@ const App = () => {
           <div className='pictureContainer'>
             <article className='thumbnail homepageImg' onPointerEnter={() => infoBoxDown(0)} onPointerLeave={() => infoBoxUp(0)}><img src="./Images/happythroughpersistant.jpg" alt="" />
               <div className='pictureDetails'>
-                <h1>Sign Up NOW!</h1><br />
+                <h1 className='first-article'>Sign Up NOW!</h1><br />
                 <p>
                 Unlock success through persistence with Persistant – your dedicated ally for seamless task management. Seamlessly integrated into your lifestyle, Persistant empowers you to conquer challenges and achieve your goals. Ready to experience the difference? Sign up now and take the first step towards a more organized, efficient, and empowered you!</p>
               </div>
